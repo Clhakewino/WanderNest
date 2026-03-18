@@ -1,13 +1,69 @@
-/* Stile di base per il corpo della pagina */
+/* Reset e basi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Un font in stile Apple */
-    background-color: #f9f9f9;
-    color: #333333;
-    max-width: 800px; /* Limita la larghezza come un .frame(maxWidth: 800) */
-    margin: 40px auto; /* Centra il contenuto e aggiunge padding esterno */
+    font-family: -apple-system, sans-serif;
+    background-color: #f2f2f7; /* Colore sfondo simile a iOS Settings */
+    color: #1c1c1e;
+    line-height: 1.6;
     padding: 20px;
 }
 
+header {
+    text-align: center;
+    padding: 40px 0;
+}
+
 h1 {
-    color: #007aff; /* Il classico blu di iOS */
+    font-size: 2.5rem;
+    color: #007aff;
+}
+
+.subtitle {
+    color: #8e8e93;
+    font-style: italic;
+}
+
+/* La "Card" del viaggio */
+.card {
+    background: white;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 20px; /* Angoli stondati stile iOS */
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.hero-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Mantiene le proporzioni ritagliando */
+}
+
+.content {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
 }
