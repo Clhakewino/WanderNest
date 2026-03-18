@@ -1,0 +1,13 @@
+/* Stile di base per il corpo della pagina */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Un font in stile Apple */
+    background-color: #f9f9f9;
+    color: #333333;
+    max-width: 800px; /* Limita la larghezza come un .frame(maxWidth: 800) */
+    margin: 40px auto; /* Centra il contenuto e aggiunge padding esterno */
+    padding: 20px;
+}
+
+h1 {
+    color: #007aff; /* Il classico blu di iOS */
+}
