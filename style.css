@@ -1,7 +1,7 @@
 /* Reset e basi */
 * {
     margin: 0;
-    padding: 0px 0px;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -32,7 +32,7 @@ h1 {
 .card {
     background: white;
     max-width: 1000px;
-    margin: 24px 0;
+    margin: 24px auto;
     border-radius: 14px; /* Angoli stondati stile iOS */
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -67,4 +67,11 @@ h2 {
 
 .btn-primary:hover {
     background-color: #0056b3;
+}
+
+.test {
+    background-color: #ff00002b;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 14px;
 }
