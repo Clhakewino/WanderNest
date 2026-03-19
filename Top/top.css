@@ -89,9 +89,12 @@ header h2 {
 }
 
 .category-item {
-    text-align: left;
-    cursor: pointer;
-    margin: 0px 10px;
+  display: flex; /* Attiva Flexbox */
+  flex-direction: column; /* Dispone in colonna */
+  align-items: center; /* Centra orizzontalmente */
+  justify-content: center; /* Centra verticalmente */
+  cursor: pointer;
+  margin: 0px;
 }
 
 .category-item .icon {
@@ -104,6 +107,7 @@ header h2 {
     font-weight: 500;
     color: white;
     text-shadow: 2px 2px 3px rgb(0, 0, 0);
+    margin-top: -10%;
 }
 
 .top-image {
