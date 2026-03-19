@@ -3,7 +3,7 @@
     flex-wrap: wrap;        /* Fondamentale: permette alle card di andare a capo su mobile */
     gap: 20px;             /* Crea lo spazio tra una card e l'altra */
     justify-content: center; /* Centra le card se non occupano tutta la larghezza */
-    padding-top: 50px;
+    padding: 50px 0px;
 }
 
 .card {
