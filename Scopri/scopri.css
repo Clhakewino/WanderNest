@@ -1,19 +1,15 @@
-h1 {
-    font-size: 2.5rem;
-    color: #0066ff;
+.card-container {
+    display: flex;          /* Attiva il layout orizzontale */
+    flex-wrap: wrap;        /* Fondamentale: permette alle card di andare a capo su mobile */
+    gap: 20px;             /* Crea lo spazio tra una card e l'altra */
+    justify-content: center; /* Centra le card se non occupano tutta la larghezza */
+    padding: 20px;
 }
 
-.subtitle {
-    color: #8e8e93;
-    font-style: italic;
-}
-
-/* La "Card" del viaggio */
 .card {
     background: white;
-    max-width: 1000px;
-    margin: 24px auto;
-    border-radius: 14px; /* Angoli stondati stile iOS */
+    flex: 1 1 400px;       /* Le card crescono, si restringono e partono da una base di 400px */
+    border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
@@ -47,11 +43,4 @@ h2 {
 
 .btn-primary:hover {
     background-color: #0056b3;
-}
-
-.test {
-    background-color: #ff00002b;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 14px;
 }
