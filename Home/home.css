@@ -162,10 +162,10 @@ header {
 
   .categories {
     order: 2;     /* Diventa l'ultimo visualmente */
-    padding: 10px 0px;
+    padding: 20px 0px;
   }
 
-  .header {
-    padding: 200px;
+  .hero {
+    padding: 0px 0;
   }
 }
