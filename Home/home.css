@@ -164,6 +164,7 @@ header {
     order: 2;     /* Diventa l'ultimo visualmente */
     padding: 0px 0px;
     padding-top: 10px;
+    gap: 20px;
   }
 
   .hero {
@@ -222,5 +223,5 @@ header {
     position: relative;
     text-align: center;
     padding: 7rem 0;
-}
+ }
 }
