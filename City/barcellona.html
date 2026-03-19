@@ -1,70 +1,12 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barcellona - Tra Arte e Mare</title>
+
     <style>
-        /* --- CSS --- */
-
-        body, h1, h2, p, ul {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-            color: #2d3436;
-            background-color: #f0f7f9; /* Un azzurro chiarissimo che richiama il mare */
-        }
-
-        /* --- Hero Section --- */
-        .hero {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            /* Immagine del Parco Guell da Unsplash */
-            background-image: url('https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1600&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(41, 128, 185, 0.4), rgba(231, 76, 60, 0.3));
-        }
-
-        .hero-text {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            font-weight: 300;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-
         /* --- Contenuto Principale --- */
         .container {
             max-width: 1000px;
@@ -75,9 +17,11 @@
         .card-info {
             background-color: white;
             padding: 50px;
-            border-radius: 30px; /* Angoli molto arrotondati stile Gaudí */
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-            border-bottom: 8px solid #e67e22; /* Colore terra/corallo */
+            border-radius: 30px;
+            /* Angoli molto arrotondati stile Gaudí */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            border-bottom: 8px solid #e67e22;
+            /* Colore terra/corallo */
         }
 
         h2 {
@@ -88,7 +32,8 @@
         }
 
         .description {
-            column-count: 2; /* Testo su due colonne per un look editoriale */
+            column-count: 2;
+            /* Testo su due colonne per un look editoriale */
             column-gap: 40px;
             margin-bottom: 40px;
             text-align: justify;
@@ -121,40 +66,31 @@
             margin-bottom: 10px;
             font-size: 1.3rem;
         }
-
-        /* --- Footer --- */
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: #7f8c8d;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .description {
-                column-count: 1;
-            }
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-        }
     </style>
+
+    <link rel="stylesheet" href="cityStyle.css">
+    <script>
+        window.heroImageUrl = 'https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1600&auto=format&fit=crop';
+        window.title = "Barcellona"
+        window.subtitle = "Arte, Sole e Libertà"
+    </script>
+    <script src="cityStyle.js"></script>
 </head>
+
 <body>
 
-    <header class="hero">
-        <div class="hero-text">
-            <h1>Barcellona</h1>
-            <p>Arte, Sole e Libertà</p>
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main class="container">
         <div class="card-info">
             <h2>L'Anima Mediterranea</h2>
             <div class="description">
-                <p>Barcellona è una città che danza tra il passato medievale del Barrio Gótico e le visioni oniriche di Antoni Gaudí. È una metropoli vibrante dove la creatività esplode in ogni facciata di mosaico e in ogni mercato affollato come la Boqueria.</p>
-                <p>Dalle spiagge dorate della Barceloneta alle vette del Tibidabo, la capitale catalana offre un mix perfetto di relax balneare, eccellenza gastronomica e un patrimonio artistico unico al mondo che la rende indimenticabile.</p>
+                <p>Barcellona è una città che danza tra il passato medievale del Barrio Gótico e le visioni oniriche di
+                    Antoni Gaudí. È una metropoli vibrante dove la creatività esplode in ogni facciata di mosaico e in
+                    ogni mercato affollato come la Boqueria.</p>
+                <p>Dalle spiagge dorate della Barceloneta alle vette del Tibidabo, la capitale catalana offre un mix
+                    perfetto di relax balneare, eccellenza gastronomica e un patrimonio artistico unico al mondo che la
+                    rende indimenticabile.</p>
             </div>
 
             <div class="attrazioni-grid">
@@ -183,4 +119,5 @@
     </footer>
 
 </body>
+
 </html>

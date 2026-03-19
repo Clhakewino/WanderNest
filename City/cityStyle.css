@@ -1,0 +1,166 @@
+body,
+h1,
+h2,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Optima', 'Candara', sans-serif;
+    line-height: 1.8;
+    color: #2c3e50;
+    background-color: #fdfdfd;
+    /* Bianco puro zen */
+}
+
+/* --- Hero Section --- */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    /* Overlay leggero per non coprire i dettagli */
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 200;
+    /* Font sottile ed elegante */
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding-top: 10px;
+}
+
+/* --- Footer --- */
+footer {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    color: #000000;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+        letter-spacing: 5px;
+    }
+
+    .templi-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .zen-container {
+        margin: 40px auto;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Spinge logo a sx e menu a dx */
+    align-items: center; /* Allinea verticalmente al centro */
+    padding: 20px 50px; /* Spazio interno */
+    position: absolute; /* Per farlo stare sopra l'immagine hero */
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.logo h2 {
+    color: white;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Stile per le barre del menu */
+.menu-icon {
+    cursor: pointer;
+    display: block;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Nasconde i link testuali (se vuoi solo l'icona bar all'inizio) */
+.nav-links {
+    display: none; /* Li mostrerai con JS al click */
+    list-style: none;
+}
+
+/* Stile base del menu (nascosto di default su mobile) */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Sotto la navbar */
+    right: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    list-style: none;
+    
+    /* Animazione di comparsa */
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Quando il menu è attivo */
+.nav-links.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.nav-links li {
+    margin: 10px 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}

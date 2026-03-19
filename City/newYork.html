@@ -1,76 +1,12 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New York City - The Empire State</title>
+
     <style>
-        /* --- CSS --- */
-
-        body, h1, h2, p, ul {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', 'Roboto', Arial, sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background-color: #ffffff;
-        }
-
-        /* --- Hero Section --- */
-        .hero {
-            position: relative;
-            width: 100%;
-            height: 550px;
-            /* Immagine di Times Square/Manhattan da Unsplash */
-            background-image: url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=1600&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Overlay più scuro per il contrasto */
-        }
-
-        .hero-text {
-            position: relative;
-            z-index: 1;
-            padding: 0 20px;
-        }
-
-        .hero h1 {
-            font-size: 5rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            line-height: 0.9;
-            margin-bottom: 15px;
-            border-left: 10px solid #f1c40f; /* Giallo Taxi NYC */
-            padding-left: 20px;
-            text-align: left;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            text-align: left;
-            font-weight: 300;
-            letter-spacing: 1px;
-            margin-left: 30px;
-        }
-
         /* --- Contenuto --- */
         .main-content {
             display: grid;
@@ -124,50 +60,34 @@
         .highlights-list strong {
             display: block;
             font-size: 1.1rem;
-            color: #e67e22; /* Un tocco di arancio */
-        }
-
-        /* --- Footer --- */
-        footer {
-            background-color: #000;
-            color: #fff;
-            text-align: center;
-            padding: 60px 20px;
-            margin-top: 80px;
-        }
-
-        footer p {
-            font-size: 0.8rem;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* Responsive */
-        @media (max-width: 850px) {
-            .main-content {
-                grid-template-columns: 1fr;
-            }
-            .hero h1 {
-                font-size: 3rem;
-            }
+            color: #e67e22;
+            /* Un tocco di arancio */
         }
     </style>
+
+    <link rel="stylesheet" href="cityStyle.css">
+    <script>
+        // Imposta l'URL dell'immagine per questa pagina
+        window.heroImageUrl = 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=1600&auto=format&fit=crop';
+        window.title = "NEW YORK CITY"
+        window.subtitle = "LA CITTÀ CHE NON DORME MAI"
+    </script>
+    <script src="cityStyle.js"></script>
 </head>
+
 <body>
 
-    <header class="hero">
-        <div class="hero-text">
-            <h1>New York<br>City</h1>
-            <p>La città che non dorme mai</p>
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main class="main-content">
         <section>
             <h2>Il Centro del Mondo</h2>
-            <p class="intro-text">New York City è un'esplosione di energia, cultura e ambizione. Divisa in cinque distretti, Manhattan ne rappresenta il cuore pulsante, dove ogni strada sembra il set di un film famoso.</p>
-            <p class="intro-text">Dallo skyline mozzafiato dominato dall'Empire State Building alla quiete inaspettata di Central Park, NYC offre un'esperienza sensoriale totale, tra i suoni dei taxi, le luci di Broadway e i profumi delle cucine di tutto il mondo.</p>
+            <p class="intro-text">New York City è un'esplosione di energia, cultura e ambizione. Divisa in cinque
+                distretti, Manhattan ne rappresenta il cuore pulsante, dove ogni strada sembra il set di un film famoso.
+            </p>
+            <p class="intro-text">Dallo skyline mozzafiato dominato dall'Empire State Building alla quiete inaspettata
+                di Central Park, NYC offre un'esperienza sensoriale totale, tra i suoni dei taxi, le luci di Broadway e
+                i profumi delle cucine di tutto il mondo.</p>
         </section>
 
         <aside class="highlights">
@@ -202,4 +122,5 @@
     </footer>
 
 </body>
+
 </html>
