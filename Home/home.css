@@ -1,0 +1,164 @@
+/* Reset e basi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #333;
+    padding: 0 10%;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 0;
+}
+
+.hero-text {
+    order: 1;
+}
+
+.hero-image {
+    order: 2;
+    flex: 0 1 300px;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+.search-container {
+    order: 3;
+    width: 100%;
+}
+
+/* Media query per schermi grandi */
+@media (min-width: 768px) {
+    .hero {
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .hero-text {
+        order: 1;
+        flex: 1;
+    }
+
+    .hero-image {
+        order: 3;
+    }
+
+    .search-container {
+        order: 2;
+        width: auto;
+        max-width: 400px;
+    }
+}
+
+/* Barra di Ricerca */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    border: 1px solid #ddd;
+    max-width: 400px;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.search-container button {
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Categorie */
+.categories {
+    display: flex;
+    justify-content: space-between;
+    padding: 1px 50px;
+    max-width: 1000px;
+    flex: auto;
+}
+
+.category-item {
+    text-align: left;
+    cursor: pointer;
+    margin: 0px 10px;
+}
+
+.category-item .icon {
+    font-size: 2rem;
+    margin-bottom: 0px;
+}
+
+.category-item h3 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Perché Sceglierci */
+.why-us {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.why-us h2 {
+    color: #999;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.benefits-bar {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    display: inline-block;
+    color: #666;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.dot {
+    margin: 0 1rem;
+    color: #ccc;
+}
