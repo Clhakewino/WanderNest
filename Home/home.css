@@ -177,7 +177,6 @@ header {
     z-index: 1;
     color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-    padding: 0px 10px;
     padding-top: 20px;
   }
 
@@ -186,7 +185,7 @@ header {
     z-index: 1;
     text-shadow: 2px 2px 3px rgb(0, 0, 0);
     margin-bottom: 2rem;
-    padding: 0px 20px;
+    padding: 0px 10px;
 }
 
   .hero-image {
@@ -216,6 +215,7 @@ header {
     border-radius: 50px;
     border: 1px solid #ddd;
     max-width: 400px;
+    width: 100%;
     margin-top: 4%;
  }
 
