@@ -62,3 +62,22 @@ function filtraCitta() {
 
 // Opzionale: Cerca in tempo reale mentre l'utente scrive!
 document.getElementById('searchInput').addEventListener('keyup', filtraCitta);
+
+document.addEventListener('click', (event) => {
+    const card = event.target.closest('.search-card');
+    if (card) {
+        const titolo = card.querySelector('h2').innerText.toLowerCase();
+        // Mappa i titoli alle pagine
+        const pagine = {
+            'parigi': '../City/parigi.html',
+            'tokyo': '../City/tokyo.html',
+            'roma': '../City/roma.html',
+            'new york': '../City/newYork.html',
+            'barcellona': '../City/barcellona.html',
+            'kyoto': '../City/kyoto.html'
+        };
+        if (pagine[titolo]) {
+            window.location.href = pagine[titolo];
+        }
+    }
+});

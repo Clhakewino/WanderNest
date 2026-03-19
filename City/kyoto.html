@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyoto - L'Anima del Giappone</title>
+    <style>
+        /* --- CSS --- */
+
+        body, h1, h2, p, ul {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Optima', 'Candara', sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background-color: #fdfdfd; /* Bianco puro zen */
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            /* Immagine del tempio Fushimi Inari o Arashiyama da Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2); /* Overlay leggero per non coprire i dettagli */
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            font-weight: 200; /* Font sottile ed elegante */
+            letter-spacing: 15px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            border-top: 1px solid rgba(255,255,255,0.5);
+            padding-top: 10px;
+        }
+
+        /* --- Contenuto Zen --- */
+        .zen-container {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 0 40px;
+            text-align: center;
+        }
+
+        .zen-container h2 {
+            font-size: 2.2rem;
+            font-weight: 300;
+            color: #1a2a1a; /* Verde bosco scurissimo */
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        /* Decorazione sotto il titolo (stile timbro giapponese) */
+        .zen-container h2::after {
+            content: '京都'; /* Caratteri Kanji per Kyoto */
+            display: block;
+            font-size: 1rem;
+            color: #c0392b; /* Rosso timbro */
+            margin-top: 10px;
+            opacity: 0.6;
+        }
+
+        .intro-text {
+            font-size: 1.25rem;
+            color: #555;
+            margin-bottom: 60px;
+            font-style: italic;
+        }
+
+        /* --- Lista Luoghi Sacri --- */
+        .templi-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            text-align: left;
+        }
+
+        .tempio {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .tempio h3 {
+            font-size: 1.4rem;
+            color: #2d5a27; /* Verde matcha */
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .tempio p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 100px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+            color: #999;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3rem; letter-spacing: 5px; }
+            .templi-grid { grid-template-columns: 1fr; gap: 30px; }
+            .zen-container { margin: 40px auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Kyoto</h1>
+            <p>La culla della tradizione</p>
+        </div>
+    </header>
+
+    <main class="zen-container">
+        <section>
+            <h2>Il Cuore Spirituale del Giappone</h2>
+            <p class="intro-text">"A Kyoto, il tempo non scorre, ma respira tra le pareti di carta e i giardini di pietra."</p>
+            <p>Con oltre duemila templi e santuari, Kyoto è il custode millenario delle arti classiche giapponesi. Dalla cerimonia del tè alle silenziose strade di Gion dove camminano le Geisha, ogni angolo di questa città è un invito alla contemplazione e alla bellezza sobria (Wabi-sabi).</p>
+        </section>
+
+        <section class="templi-grid">
+            <div class="tempio">
+                <h3>Kinkaku-ji</h3>
+                <p>Il celebre Padiglione d'Oro che si specchia elegantemente nel laghetto circostante.</p>
+            </div>
+            <div class="tempio">
+                <h3>Fushimi Inari-taisha</h3>
+                <p>Migliaia di portali Torii rossi che formano un tunnel infinito attraverso la foresta sacra.</p>
+            </div>
+            <div class="tempio">
+                <h3>Foresta di Bambù</h3>
+                <p>Ad Arashiyama, un sentiero incantato dove il vento sussurra tra le alte canne di bambù.</p>
+            </div>
+            <div class="tempio">
+                <h3>Kiyomizu-dera</h3>
+                <p>Un maestoso tempio in legno costruito senza l'uso di chiodi, con vista panoramica sulla città.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>ARMONIA E PACE | KYOTO TRAVEL EXPERIENCE</p>
+    </footer>
+
+</body>
+</html>

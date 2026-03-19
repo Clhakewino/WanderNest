@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scopri Parigi - La Ville Lumière</title>
+    <style>
+        body, h1, h2, p, ul {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* --- Hero Section (Immagine e Titolo) --- */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 400px; /* Altezza dell'immagine header */
+            background-image: url('https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?q=80&w=1600&auto=format&fit=crop'); /* Immagine di Parigi da Unsplash */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Sovrapposizione scura per rendere il testo più leggibile */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Regola l'opacità qui */
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 1; /* Porta il testo sopra la sovrapposizione scura */
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* --- Contenuto Principale --- */
+        .container {
+            max-width: 800px;
+            margin: 40px auto; /* Centra il contenuto e aggiunge spazio sopra/sotto */
+            padding: 0 20px; /* Spazio ai lati su schermi piccoli */
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* --- Lista Attrazioni --- */
+        .attrazioni-list {
+            list-style-type: none; /* Rimuove i punti elenco predefiniti */
+        }
+
+        .attrazioni-list li {
+            background-color: #ecf0f1;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .attrazioni-list li:hover {
+            background-color: #d6eaf8; /* Effetto hover */
+        }
+
+        .attrazioni-list strong {
+            color: #2980b9;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        /* --- Responsive Design (per dispositivi mobili) --- */
+        @media (max-width: 600px) {
+            .hero {
+                height: 300px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 20px;
+                margin: 20px auto;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+        </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Parigi</h1>
+            <p>Benvenuti nella Città dell'Amore e delle Luci</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="introduzione">
+            <h2>Una Panoramica su Parigi</h2>
+            <p>Parigi, la capitale della Francia, è una delle città più iconiche e visitate al mondo. Situata sulle rive della Senna, è famosa per la sua storia millenaria, l'architettura straordinaria, l'arte senza tempo e la sua rinomata cucina.</p>
+            <p>Conosciuta come la "Ville Lumière" (Città delle Luci), Parigi incanta i visitatori con i suoi ampi viali, i caffè storici e l'atmosfera romantica che si respira in ogni angolo, dal quartiere artistico di Montmartre alle eleganti strade del Marais.</p>
+        </section>
+
+        <section class="attrazioni">
+            <h2>Attrazioni Principali da Non Perdere</h2>
+            <p>Oltre alla celebre Torre Eiffel, Parigi offre un'infinità di tesori da scoprire. Ecco alcune delle tappe fondamentali per ogni viaggiatore:</p>
+            <ul class="attrazioni-list">
+                <li><strong>Torre Eiffel:</strong> Il simbolo indiscusso di Parigi, che offre viste mozzafiato sulla città.</li>
+                <li><strong>Museo del Louvre:</strong> Uno dei musei più grandi e importanti al mondo, casa della Gioconda.</li>
+                <li><strong>Cattedrale di Notre-Dame:</strong> Un capolavoro dell'architettura gotica francese (attualmente in fase di restauro).</li>
+                <li><strong>Arco di Trionfo e Champs-Élysées:</strong> Un monumento imponente che domina il celebre viale dello shopping.</li>
+                <li><strong>Sacre-Cœur e Montmartre:</strong> La basilica bianca che domina la città dal punto più alto, nel cuore del quartiere degli artisti.</li>
+                <li><strong>Museo d'Orsay:</strong> Famoso per la sua straordinaria collezione di arte impressionista e post-impressionista.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Guida Semplice su Parigi.</p>
+    </footer>
+
+</body>
+</html>
