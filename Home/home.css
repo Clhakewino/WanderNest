@@ -1,38 +1,3 @@
-/* Reset e basi */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background-color: #f8fafc;
-    color: #333;
-    padding: 0 10%;
-}
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 0;
-    flex-wrap: wrap;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-}
-
-.menu-icon {
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
 /* Hero Section */
 .hero {
     display: flex;
@@ -91,33 +56,6 @@ header {
     color: #333;
 }
 
-/* Categorie */
-.categories {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 1px 0px;
-    max-width: 800px;
-    flex: 560px;
-    flex-wrap: wrap;
-}
-
-.category-item {
-    text-align: left;
-    cursor: pointer;
-    margin: 0px 10px;
-}
-
-.category-item .icon {
-    font-size: 2rem;
-    margin-bottom: 0px;
-}
-
-.category-item h3 {
-    font-size: 1rem;
-    font-weight: 500;
-}
-
 /* Perché Sceglierci */
 .why-us {
     text-align: center;
@@ -144,29 +82,8 @@ header {
     color: #ccc;
 }
 
-@media (min-width: 768px) {
-    .categories {
-        padding: 0px 50px;
-    }
-}
-
 /* Layout per schermi piccoli (Smartphone) */
 @media (max-width: 900px) {
-  .logo {
-    order: 0;     /* Rimane il primo */
-  }
-
-   .menu-icon{
-    order: 1;     /* Diventa il secondo visualmente */
-  }
-
-  .categories {
-    order: 2;     /* Diventa l'ultimo visualmente */
-    padding: 0px 0px;
-    padding-top: 10px;
-    gap: 20px;
-  }
-
   .hero {
     padding: 0px 0;
     position: relative;
