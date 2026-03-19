@@ -14,3 +14,51 @@ fetch('../Top/header.html')
             }
         });
     });
+
+function filtraCitta() {
+    let input = document.getElementById('searchInput').value.toLowerCase().trim();
+    let cards = document.getElementsByClassName('search-card');
+    let messaggio = document.getElementById('messaggio-ricerca');
+
+    // Se l'input è vuoto, mostra tutte le card
+    if (input === '') {
+        if (messaggio) messaggio.remove();
+        return;
+    }
+
+    // Se l'input ha meno di 3 caratteri, nascondi tutte le card
+    if (input.length < 3) {
+        for (let i = 0; i < cards.length; i++) {
+            cards[i].style.display = "none";
+        }
+        if (messaggio) messaggio.remove();
+        return;
+    }
+
+    // Filtra le card
+    let risultatiVisibili = 0;
+    for (let i = 0; i < cards.length; i++) {
+        let titolo = cards[i].querySelector('h2').innerText.toLowerCase();
+        if (titolo.includes(input)) {
+            cards[i].style.display = "flex";
+            risultatiVisibili++;
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+
+    // Gestione messaggio
+    if (risultatiVisibili === 0) {
+        if (!messaggio) {
+            messaggio = document.createElement('p');
+            messaggio.id = 'messaggio-ricerca';
+            messaggio.innerText = 'Spiacenti, città non trovata.';
+            document.getElementById('containerCitta').appendChild(messaggio);
+        }
+    } else {
+        if (messaggio) messaggio.remove();
+    }
+}
+
+// Opzionale: Cerca in tempo reale mentre l'utente scrive!
+document.getElementById('searchInput').addEventListener('keyup', filtraCitta);

@@ -50,6 +50,66 @@
     color: #333;
 }
 
+.search-card-container {
+    display: flex;          /* Attiva il layout orizzontale */
+    flex-wrap: wrap;        /* Fondamentale: permette alle card di andare a capo su mobile */
+    gap: 10px;             /* Crea lo spazio tra una card e l'altra */
+    justify-content: center; /* Centra le card se non occupano tutta la larghezza */
+    padding-top: 5px;
+}
+
+.search-card {
+    background: white;
+    flex: 1 1 400px;       /* Le card crescono, si restringono e partono da una base di 400px */
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 800px;
+    max-height: 100px;
+    display: none; /* Nasconde le card per default */
+}
+
+.search-card h2 {
+    padding: 0px 10px;
+}
+
+.search-card p {
+    padding: 0px 10px;
+    font-size: 1rem;
+    color: rgba(39, 39, 39, 0.301);
+    text-shadow: 0px 0px 0px rgb(0, 0, 0);
+}
+
+.search-card img {
+    width: 10%;
+    height: 100%;
+    object-fit: cover; /* Mantiene le proporzioni ritagliando */
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    display: inline-block;
+    text-decoration: none; /* Rimuove la sottolineatura blu dei link */
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007aff;
+    color: white;
+    border-radius: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.card {
+    display: none; /* Nasconde le card per default */
+}
+
 /* Perché Sceglierci */
 .why-us {
     text-align: center;
@@ -78,11 +138,6 @@
 
 /* Layout per schermi piccoli (Smartphone) */
 @media (max-width: 900px) {
-  .hero {
-    padding: 0px 0;
-    position: relative;
-  }
-
   .hero-text h1 {
     position: relative;
     z-index: 1;
@@ -117,18 +172,21 @@
     border-radius: 10px;
   }
 
-  .search-container {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    background: white;
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    border: 1px solid #ddd;
-    max-width: 400px;
-    width: 100%;
-    margin-top: 4%;
- }
+  .search-card {
+    max-height: 50px;
+}
+
+.search-card h2 {
+    padding: 0px 8px;
+    font-size: 1rem;
+}
+
+.search-card p {
+    padding: 0px 10px;
+    font-size: 0.8rem;
+    color: rgba(39, 39, 39, 0.301);
+    text-shadow: 0px 0px 0px rgb(0, 0, 0);
+}
 
  .why-us {
     position: relative;

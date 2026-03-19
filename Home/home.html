@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="../Top/top.css">
 </head>
+
 <body>
 
     <div id="header-placeholder"></div>
@@ -18,8 +20,53 @@
                 <p>WanderNest. Esperienze di viaggio uniche e personalizzate.</p>
                 <div class="search-container">
                     <span class="search-icon">🔍</span>
-                    <input type="text" placeholder="La tua destinazione...">
-                    <button>Cerca</button>
+                    <input type="text" id="searchInput" placeholder="La tua destinazione...">
+                    <button onclick="filtraCitta()">Cerca</button>
+                </div>
+
+                <div class="search-card-container" id="containerCitta">
+                    <div class="search-card">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=10">
+                        <div>
+                            <h2>Parigi</h2>
+                            <p>La Ville Lumière...</p>
+                        </div>
+                    </div>
+                    <div class="search-card">
+                        <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=800&auto=format&fit=crop">
+                        <div>
+                            <h2>Tokyo</h2>
+                            <p>Un mix travolgente...</p>
+                        </div>
+                    </div>
+                    <div class="search-card">
+                        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80">
+                        <div>
+                            <h2>Roma</h2>
+                            <p>La Città Eterna...</p>
+                        </div>
+                    </div>
+                    <div class="search-card">
+                        <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=800&q=80">
+                        <div>
+                            <h2>New York</h2>
+                            <p>La metropoli che non dorme mai...</p>
+                        </div>
+                    </div>
+                    <div class="search-card">
+                        <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&w=800&q=80">
+                        <div>
+                            <h2>Barcellona</h2>
+                            <p>Tra le architetture oniriche...</p>
+                        </div>
+                    </div>
+                    <div class="search-card">
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80">
+                        <div>
+                            <h2>Kyoto</h2>
+                            <p>Il cuore spirituale del Giappone...</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -38,4 +85,5 @@
 
     <script src="../Top/top.js"></script>
 </body>
+
 </html>
