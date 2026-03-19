@@ -162,7 +162,8 @@ header {
 
   .categories {
     order: 2;     /* Diventa l'ultimo visualmente */
-    padding: 20px 0px;
+    padding: 0px 0px;
+    padding-top: 10px;
   }
 
   .hero {
@@ -176,6 +177,7 @@ header {
     color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     padding: 0px 10px;
+    padding-top: 20px;
   }
 
   .hero-text p {
