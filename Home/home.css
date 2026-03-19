@@ -1,36 +1,29 @@
-/* Hero Section */
 .hero {
+    position: relative;
     display: flex;
-    align-items: center;
-    gap: 4rem;
-    padding: 4rem 0;
-    flex-wrap: wrap;
-}
-
-.hero-text h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-}
-
-.hero-text p {
-    color: #666;
-    margin-bottom: 2rem;
-}
-
-.hero-image {
-    flex: 320px;
-}
-
-.hero-image img {
+    justify-content: center; /* Centra orizzontalmente i figli */
     width: 100%;
-    max-width: 1000px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    object-fit: cover;
+  }
+
+  .hero-text h1 {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  .hero-text p {
+    color: #ffffff;
+    z-index: 1;
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+    margin-bottom: 2rem;
+    padding: 0px 10px;
+    padding-top: 20px;
+    text-align: center;
 }
 
-/* Barra di Ricerca */
 .search-container {
     display: flex;
     align-items: center;
@@ -38,7 +31,8 @@
     padding: 0.5rem 1rem;
     border-radius: 50px;
     border: 1px solid #ddd;
-    max-width: 400px;
+    width: 100%;
+    margin-top: 15%; /* Mantiene lo spazio dall'alto */
 }
 
 .search-container input {
