@@ -92,10 +92,14 @@ footer {
 
 .navbar {
     display: flex;
-    justify-content: space-between; /* Spinge logo a sx e menu a dx */
-    align-items: center; /* Allinea verticalmente al centro */
-    padding: 20px 50px; /* Spazio interno */
-    position: absolute; /* Per farlo stare sopra l'immagine hero */
+    justify-content: space-between;
+    /* Spinge logo a sx e menu a dx */
+    align-items: center;
+    /* Allinea verticalmente al centro */
+    padding: 20px 50px;
+    /* Spazio interno */
+    position: absolute;
+    /* Per farlo stare sopra l'immagine hero */
     top: 0;
     left: 0;
     width: 100%;
@@ -104,9 +108,15 @@ footer {
 }
 
 .logo h2 {
+    font-size: 2rem;
     color: white;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    border-bottom: none
+}
+
+.logo h2::before {
+    display: none;
 }
 
 /* Stile per le barre del menu */
@@ -125,7 +135,8 @@ footer {
 
 /* Nasconde i link testuali (se vuoi solo l'icona bar all'inizio) */
 .nav-links {
-    display: none; /* Li mostrerai con JS al click */
+    display: none;
+    /* Li mostrerai con JS al click */
     list-style: none;
 }
 
@@ -134,13 +145,14 @@ footer {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 70px; /* Sotto la navbar */
+    top: 70px;
+    /* Sotto la navbar */
     right: 20px;
     background: rgba(0, 0, 0, 0.9);
     padding: 20px;
     border-radius: 10px;
     list-style: none;
-    
+
     /* Animazione di comparsa */
     opacity: 0;
     transform: translateY(-10px);
